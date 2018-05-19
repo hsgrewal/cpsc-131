@@ -45,8 +45,7 @@ const char* InvalidStateException::description() {
 SeatConflictException::SeatConflictException(Passenger* first, Passenger* second)
   throw(ArgumentException) {
 
-  if ((NULL == first) ||
-      (NULL == second))
+  if ((NULL == first) || (NULL == second))
     throw ArgumentException("null pointer");
 
   _first = first;
